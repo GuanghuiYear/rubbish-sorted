@@ -1,7 +1,7 @@
 App({
   globalData: {
     userInfo: null,
-    url: 'http://m.bhfyz.com'
+    baseUrl: 'http://m.bhfyz.com'
   },
   onLaunch: function() {
     this.login();

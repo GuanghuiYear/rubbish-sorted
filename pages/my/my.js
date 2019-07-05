@@ -5,7 +5,7 @@ Page({
     avatarUrl:'/images/head.png'
   },
   onLoad: function (options) {
-    
+    var that = this;
     wx.getUserInfo({
       success: function (res) {
         console.log(res);

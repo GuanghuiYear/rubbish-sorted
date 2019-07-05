@@ -22,16 +22,18 @@ Page({
     var that = this;
     wx.chooseImage({
       count: 1,
+      sourceType: ['camera'],
       success: function(res) {
+        console.log(res)
         // 这里无论用户是从相册选择还是直接用相机拍摄，拍摄完成后的图片临时路径都会传递进来
         app.startOperating("保存中");
         var filePath = res.tempFilePaths[0];//图片的本地临时文件路径列表
         var session_key = wx.getStorageSync('session_key');
         // 这里顺道展示一下如何将上传上来的文件返回给后端，就是调用wx.uploadFile函数
         wx.uploadFile({
-          url: app.globalData.url + '/test/test_discern_image?img=',
+          url: app.globalData.baseUrl + '/test/test_discern_image?img=',
           filePath: filePath,
-          name: 'file',
+          name: 'rubbish',
           success: function(res) {
             console.log(res);
             app.stopOperating();
