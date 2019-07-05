@@ -1,0 +1,9 @@
+.container{padding:90rpx;}
+.title{width: 600rpx;height: 131rpx;}
+.block text{font-size: 28rpx;}
+.img{width: 90rpx;height: 90rpx;border-radius: 50%;background: #c8e2e6;margin:0 auto 10rpx;}
+.search{position: relative;border:1px solid #ccc;border-radius: 10rpx;background: rgba(255,255,255,.3);height: 91rpx;width: 100%;margin-top: 80rpx;margin-bottom: 86rpx;}
+.search .input{background: none;width: 440rpx;margin-left: 20rpx;margin-top: 20rpx;}
+.search .i-search{width: 86rpx;height: 91rpx;position: absolute;right: 0;top: 0;bottom: 0;}
+.block{width: 100%;}
+.block-item{width: 33.33%;text-align: center;}

@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="search">
+    <input type='text' class="input" placeholder='垃圾名称'></input>
+    <image src='/images/search.png' class="i-search"></image>
+  </view>
+  <view class="hot">
+    <view class="title">热门搜索</view>
+    <view class="box">
+      <view class="hotname">辣条</view>
+      <view class="hotname">牛奶</view>
+      <view class="hotname">辣剩饭条</view>
+      <view class="hotname">冰箱</view>
+      <view class="hotname">辣空调妈妈咪条</view>
+      <view class="hotname">辣剩饭条</view>
+      <view class="hotname">冰箱</view>
+      <view class="hotname">辣空调妈妈咪条</view>
+    </view>
+  </view>
+  <view class="searchResult">
+    <view>你不知道吧？【是拉条】属于<text class="orangebig">外星物种</text></view>
+    <view><text class="orangebig">外星物种</text>是指我无法识别的物种、主要包括我的大脑中没有记忆的未来生物，你好厉害！</view>
+  </view>
+  <button class="more" bindtap='toKnowledge'>
+    <text>去get更多技能</text>
+  </button>
+  <image src="/images/picbg.png" class="v-ab picbg"></image>
+</view>

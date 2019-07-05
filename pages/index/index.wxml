@@ -1,0 +1,22 @@
+<view class="container flex-column itemC">
+  <image src='/images/title.png' class="title"></image>
+  <view class="search" bindtap='toSearch'>
+    <input type='text' class="input" disabled='disabled' placeholder='搜索啦~'></input>
+    <image src='/images/search.png' class="i-search"></image>
+  </view>
+  <view class="block flex-row">
+    <view class="block-item flex-column" bindtap='getLocalImage'>
+      <image src='/images/camera.png' class="img"></image>
+      <text>拍照</text>
+    </view>
+    <view class="block-item flex-column" bindtap='toKnowledge'>
+      <image src='/images/knowledge.png' class="img"></image>
+      <text>知识</text>
+    </view>
+    <view class="block-item flex-column" bindtap='toMy'>
+      <image src='/images/my.png' class="img"></image>
+      <text>我的</text>
+    </view>
+  </view>
+  <image src="/images/picbg_index.png" class="v-ab picbg"></image>
+</view>

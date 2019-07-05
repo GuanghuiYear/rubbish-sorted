@@ -1,0 +1,10 @@
+.nav{position: absolute;top: 0;width: 100%;text-align: center;align-items: flex-start}
+.nav .navson{width: 30rpx;padding:20rpx 0 30rpx;color:#fff;border-radius: 0 0 100rpx 100rpx;flex: 1;font-size: 28rpx;opacity: .6}
+.nav .navson.blue{background:#2597d3;}
+.nav .navson.green{background: #3cbc5c;}
+.nav .navson.orange{background:#ed8d25;}
+.nav .navson.red{background:#dd5243;}
+.nav .navson.on{padding-top: 40rpx;padding-bottom: 40rpx;font-weight: bold;opacity: 1}
+.nr{padding:30rpx;padding-top: 160rpx;}
+.nr view{font-size: 28rpx;text-align: justify;line-height: 1.8;text-indent: 2em;display: none;}
+.nr view.on{display: block;}

@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="nav flex-row">
+    <block wx:for="{{navson}}" wx:key="{{index}}">
+      <view class="navson {{item.class}} {{index == active ? 'on':'' }}" bindtap='rubbishDisplay' data-index="{{index}}">{{item.title}}</view>
+    </block>
+  </view>
+  <view class="nr">
+    <block wx:for="{{navson}}" wx:key="{{index}}">
+      <view class="{{index == active ? 'on':'' }}" data-index="{{index}}">
+        {{item.context}}
+      </view>
+    </block>
+  </view>
+  <image src="/images/picbg.png" class="v-ab picbg"></image>
+</view>
