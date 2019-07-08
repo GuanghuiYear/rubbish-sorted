@@ -1,10 +1,10 @@
 App({
   globalData: {
     userInfo: null,
-    baseUrl: 'http://m.bhfyz.com'
+    baseUrl: 'https://xcx.ckxstudy.com'
   },
   onLaunch: function() {
-    this.login();
+    // this.login();
   },
   showSuccess: function(message) {
     wx.showToast({

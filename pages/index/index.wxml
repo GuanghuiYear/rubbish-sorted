@@ -18,5 +18,19 @@
       <text>我的</text>
     </view>
   </view>
+  <block wx:if="{{chooseBox}}">
+    <view class="mask" bindtap='hidemask'></view>
+    <view class="classification flex-column">
+      <text class="tit">识别可能结果</text>
+      <view class="flex-row itembox">
+        <view class="item {{active===index ? 'active' : ''}}" wx:for="{{chooseinfor}}" wx:key="{{index}}" bindtap='choose' data-index="{{index}}" data-val="{{item}}">
+          <text>{{item}}</text>
+        </view>
+      </view>
+      <input type='text' placeholder='没找到？输入补充一下' class="inp-supply" bindinput="inpSpply"></input>
+      <button class="confirm btn" bindtap='confirm'>确认</button>
+    </view>
+  </block>
+
   <image src="/images/picbg_index.png" class="v-ab picbg"></image>
 </view>

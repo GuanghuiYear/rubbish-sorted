@@ -7,3 +7,14 @@
 .search .i-search{width: 86rpx;height: 91rpx;position: absolute;right: 0;top: 0;bottom: 0;}
 .block{width: 100%;}
 .block-item{width: 33.33%;text-align: center;}
+
+.classification{background: #fff;position: fixed;bottom: 0;left: 0;right: 0;z-index: 99;}
+.classification .tit{font-size: 32rpx;background: #feecde;padding:20rpx;}
+.classification .itembox{padding:5% 2%;}
+.classification .item{width: 23%;text-align: center;border: 1px solid #f8801f;padding:35rpx 0;margin:1%;border-radius: 0.8rem;}
+.classification .item text{font-size: 28rpx;}
+.classification .item.active{background-color: #f8801f;color:#fff;}
+
+.confirm{background: #f8801f;color:#fff;width: 100%;border-radius: 0;}
+.confirm:after{border: none;}
+.inp-supply{padding:10rpx 0;border-bottom:1px solid #f8801f;margin-bottom: 40rpx;width: 94%;margin-left: auto;margin-right: auto;font-size: 28rpx;}
