@@ -60,7 +60,7 @@ Page({
       count: 1,
       sourceType: ['camera'],
       success: function(res) {
-        console.log(res)
+        // console.log(res)
         // 这里无论用户是从相册选择还是直接用相机拍摄，拍摄完成后的图片临时路径都会传递进来
         app.startOperating("识别中");
 
@@ -72,7 +72,7 @@ Page({
           filePath: filePath,
           name: 'rubbish',
           success: function(res) {
-            console.log(res);
+            // console.log(res);
             app.stopOperating();
             // 下面的处理其实是跟我自己的业务逻辑有关6
             var data = JSON.parse(res.data);

@@ -1,10 +1,11 @@
 App({
   globalData: {
+    openId:'',
     userInfo: null,
     baseUrl: 'https://xcx.ckxstudy.com'
   },
   onLaunch: function() {
-    // this.login();
+    this.login();
   },
   showSuccess: function(message) {
     wx.showToast({
@@ -35,7 +36,7 @@ App({
     wx.login({
       success: function(e) {
         wx.request({
-          url: that.globalData.baseUrl + '/my/my',
+          url: that.globalData.baseUrl + '/login/login',
           data: {
             code: e.code
           },

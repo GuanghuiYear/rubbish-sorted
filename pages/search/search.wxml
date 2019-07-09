@@ -1,7 +1,7 @@
 <view class="container">
   <view class="search">
-    <input type='text' class="input" placeholder='垃圾名称' value="{{searchVal}}"></input>
-    <image src='/images/search.png' class="i-search"></image>
+    <input type='text' class="input" placeholder='垃圾名称' value="{{searchVal}}" bindinput="inpSearch"></input>
+    <image src='/images/search.png' class="i-search" bindtap='searchKey'></image>
   </view>
   <!-- <view class="hot">
     <view class="title">热门搜索</view>
@@ -21,7 +21,7 @@
       <view>你不知道吧？【{{searchVal}}】属于
         <text class="orangebig">{{searchResult}}</text>
       </view>
-      <view wx:if="{{describe}}">
+      <view wx:if="{{showDescribe}}">
         <text class="orangebig">{{searchResult}}</text>{{describe}}</view>
     </view>
     <button class="more" bindtap='toKnowledge'>
