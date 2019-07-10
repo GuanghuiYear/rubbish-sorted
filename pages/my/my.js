@@ -3,7 +3,7 @@ var app = getApp();
 Page({
   data: {
     nickName: '小卫士',
-    avatarUrl: '/images/head.png',
+    avatarUrl: '/images/head.jpg',
     is_login: false
   },
   onLoad: function(options) {
@@ -35,7 +35,7 @@ Page({
                 })
               } else {
                 wx.showToast({
-                  image: '/images/icon/infor_fail.png',
+                  icon: 'none',
                   title: res.info,
                   duration: 2000,
                   mask: true
