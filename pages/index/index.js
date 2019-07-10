@@ -83,7 +83,7 @@ Page({
                 chooseinfor: data.data
               })
             } else {
-              app.showError("文件保存失败");
+              app.showError("无法识别,请改用手动填写");
             }
           }
         })

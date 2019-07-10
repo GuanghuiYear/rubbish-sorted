@@ -11,14 +11,14 @@ App({
     wx.showToast({
       title: message,
       duration: 2000,
-      // image: "/images/Common/Success.png",
+      icon: 'none'
     })
   },
   showError: function(message) {
     wx.showToast({
       title: message,
       duration: 2000,
-      // image: "/images/Common/Error.png",
+      icon: 'none'
     })
   },
   startOperating: function(info) {

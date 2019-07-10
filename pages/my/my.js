@@ -16,5 +16,8 @@ Page({
       },
     })
   },
+  register(e){
+    console.log(e);
+  }
   
 })

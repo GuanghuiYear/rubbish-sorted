@@ -17,13 +17,13 @@ Page({
   },
   inpSearch(e) {
     this.setData({
-      searchVal: e.detail.value
+      searchValue: e.detail.value
     })
   },
   searchKey(e) {
     let that = this;
     wx.request({
-      url: app.globalData.baseUrl + '/api/rubbish_sort?keywords=' + that.data.searchVal,
+      url: app.globalData.baseUrl + '/api/rubbish_sort?keywords=' + e,
       success: function(res) {
         that.setData({
           hasResult: true

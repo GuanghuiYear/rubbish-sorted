@@ -2,7 +2,6 @@
   <view class="avatar">
     <image src='{{avatarUrl}}'></image>
   </view>
-  
   <view class="name">{{nickName}}</view>
   <button class="btn-register" size='mini' type='warn' open-type='getUserInfo' bindgetuserinfo='register'>登录</button>
   <button class="share flex-row itemC" open-type='share'>
