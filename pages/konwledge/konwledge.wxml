@@ -7,7 +7,7 @@
   <view class="nr">
     <block wx:for="{{navson}}" wx:key="{{index}}">
       <view class="{{index == active ? 'on':'' }}" data-index="{{index}}">
-        <rich-text>{{item.context}}</rich-text>
+        <text>{{item.context}}</text>
       </view>
     </block>
   </view>
