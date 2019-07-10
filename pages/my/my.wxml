@@ -3,7 +3,7 @@
     <image src='{{avatarUrl}}'></image>
   </view>
   <view class="name">{{nickName}}</view>
-  <button class="btn-register" size='mini' type='warn' open-type='getUserInfo' bindgetuserinfo='register'>登录</button>
+  <button hidden="{{is_login}}" class="btn-register" size='mini' type='warn' open-type='getUserInfo' bindgetuserinfo='register'>登录</button>
   <button class="share flex-row itemC" open-type='share'>
     <image src="/images/icon_honor.png" class="img-honor"></image>
     <text>争做环保小卫士</text>
