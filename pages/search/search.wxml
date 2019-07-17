@@ -1,33 +1,34 @@
 <view class="container">
   <view class="search">
-    <input type='text' class="input" placeholder='垃圾名称' value="{{searchVal}}" bindinput="inpSearch"></input>
+    <input type='text' class="input" placeholder='垃圾名称' value="{{searchVal}}" bindinput="inpSearch" bindconfirm="searchKey" auto-focus="true"></input>
     <image src='/images/search.png' class="i-search" bindtap='searchKey'></image>
   </view>
-  <!-- <view class="hot">
-    <view class="title">热门搜索</view>
-    <view class="box">
-      <view class="hotname">辣条</view>
-      <view class="hotname">牛奶</view>
-      <view class="hotname">辣剩饭条</view>
-      <view class="hotname">冰箱</view>
-      <view class="hotname">辣空调妈妈咪条</view>
-      <view class="hotname">辣剩饭条</view>
-      <view class="hotname">冰箱</view>
-      <view class="hotname">辣空调妈妈咪条</view>
-    </view>
-  </view> -->
-  <block wx:if="{{hasResult}}">
-    <view class="searchResult">
-      <view>你不知道吧？【{{searchVal}}】属于
-        <text class="orangebig">{{searchResult}}</text>
+  <block wx:if="{{hasdata}}">
+    <block wx:if="{{hasResult}}">
+      <view class="flex-column">
+        <view class="list flex-row" wx:for="{{searchArr}}" wx:key="{{index}}" bindtap='showType' data-img="{{item.img}}">
+          <image src='{{item.img}}' class="icon"></image>
+          <text>{{item.name}}</text>
+        </view>
       </view>
-      <view wx:if="{{showDescribe}}">
-        <text class="orangebig">{{searchResult}}</text>{{describe}}</view>
-    </view>
-    <button class="more" bindtap='toKnowledge'>
-      <text>去get更多技能</text>
-    </button>
-  </block>
+    </block>
 
-  <image src="/images/picbg.png" class="v-ab picbg"></image>
+    <block wx:else>
+      <view class="searchResult">
+        <view>你不知道吧？【{{searchVal}}】属于
+          <text class="orangebig">{{searchResult}}</text>
+        </view>
+        <view wx:if="{{showDescribe}}">
+          <text class="orangebig">{{searchResult}}</text>{{describe}}</view>
+      </view>
+      <button class="more" bindtap='toKnowledge'>
+        <text>去get更多技能</text>
+      </button>
+    </block>
+  </block>
+  <!-- <image src="/images/picbg.png" class="v-ab picbg"></image> -->
+</view>
+
+<view wx:if="{{showTypeMask}}" class="showtypemask" bindtap='controlTypeMask'>
+  <image src='{{typeImg}}' class="typeimg"></image>
 </view>

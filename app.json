@@ -8,9 +8,31 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#e96a03",
     "navigationBarTitleText": "垃圾分类智能生活助手",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "拍照",
+        "iconPath": "/images/camera.png",
+        "selectedIconPath": "/images/camera.png"
+      },
+      {
+        "pagePath": "pages/konwledge/konwledge",
+        "text": "知识",
+        "iconPath": "/images/knowledge.png",
+        "selectedIconPath": "/images/knowledge.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/my.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

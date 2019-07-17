@@ -1,12 +1,14 @@
 App({
   globalData: {
-    openId:'',
+    openId: '',
     userInfo: null,
     baseUrl: 'https://xcx.ckxstudy.com'
   },
   onLaunch: function() {
     this.login();
+    wx.showShareMenu()
   },
+
   showSuccess: function(message) {
     wx.showToast({
       title: message,

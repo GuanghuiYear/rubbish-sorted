@@ -8,12 +8,12 @@ Page({
     inpSpplyVal: ''
   },
   toKnowledge() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/konwledge/konwledge'
     })
   },
   toMy() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/my/my'
     })
   },
@@ -58,7 +58,7 @@ Page({
     var that = this;
     wx.chooseImage({
       count: 1,
-      sourceType: ['camera'],
+      sourceType: ['album','camera'],
       success: function(res) {
         // console.log(res)
         // 这里无论用户是从相册选择还是直接用相机拍摄，拍摄完成后的图片临时路径都会传递进来

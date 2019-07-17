@@ -3,13 +3,16 @@
 .search .input{background: none;width: 600rpx;height: 74rpx;line-height: 74rpx;margin-left: 20rpx;}
 .search .i-search{width: 70rpx;height: 74rpx;position: absolute;right: 0;top: 0;bottom: 0;}
 
-.hot .title{font-size: 30rpx;padding-left: 20rpx;color:#e10;margin-bottom: 10rpx;}
-.hot .box{padding-left: 14rpx;}
-.hot .hotname{display: inline-block;padding:6rpx 20rpx;margin:6rpx;background: #ebb284;border-radius: 10rpx;color: #fff;font-size: 26rpx;}
-
 .searchResult{padding:20rpx;line-height: 1.6;}
 .searchResult view{font-size: 28rpx;}
 .orangebig{font-size: 38rpx;color:#e96a03;}
 
 .more{background: #34a952;color:#fff;border:0;width: 50%;margin-top: 80rpx;}
 .more:after{border:none;}
+
+.list{padding:20rpx;background: rgba(255,255,255,.6);margin-bottom: 1px}
+.list .icon{width: 40rpx;height:40rpx;margin-right:20rpx;}
+.list text{font-size: 30rpx;line-height:40rpx;}
+
+.showtypemask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);z-index: 9;}
+.showtypemask .typeimg{width: 363rpx;height: 363rpx;top: 50%;margin-top: -181rpx;left: 50%;margin-left: -181rpx;position: absolute;}
