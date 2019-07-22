@@ -42,14 +42,18 @@ Page({
     let v_chooseR = this.data.chooseRubbish;
     let v_inputR = this.data.inpSpplyVal;
     let that = this;
-    if (v_chooseR != '') {
+    let value = v_chooseR ? v_chooseR : (v_inputR ? v_inputR : '');
+
+    if (value != '') {
       wx.navigateTo({
-        url: '/pages/search/search?search=' + v_chooseR,
+        url: '/pages/search/search?search=' + value,
       });
-    } else if (v_inputR != '') {
-      wx.navigateTo({
-        url: '/pages/search/search?search=' + v_inputR,
-      });
+      this.setData({
+        chooseBox: false,
+        chooseRubbish: '',
+        active: '',
+        inpSpplyVal: ''
+      })
     } else {
       app.showError('请选择或填写信息');
     }

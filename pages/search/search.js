@@ -28,10 +28,13 @@ Page({
   searchKey(e) {
     if (this.data.searchVal != "") {
       let that = this;
+      wx.showLoading({
+        title: '加载中',
+      })
       wx.request({
         url: app.globalData.baseUrl + '/api/rubbish_sort?keywords=' + this.data.searchVal,
         success: function(res) {
-          console.log(res);
+          wx.hideLoading();
           if (res.data.code == 0) {
             for (let i = 0; i < res.data.data.length; i++) {
               if (res.data.data[i].type == '有害垃圾') {
