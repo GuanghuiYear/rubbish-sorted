@@ -1,7 +1,8 @@
 .container{padding-top: 2%;}
 .search{position: relative;border:1px solid #e96a03;border-radius: 10rpx;background: rgba(255,255,255,.5);height: 74rpx;width: 96%;margin:0 auto 2%;}
-.search .input{background: none;width: 600rpx;height: 74rpx;line-height: 74rpx;margin-left: 20rpx;}
+.search .input{background: none;width: 555rpx;height: 74rpx;line-height: 74rpx;margin-left: 20rpx;}
 .search .i-search{width: 70rpx;height: 74rpx;position: absolute;right: 0;top: 0;bottom: 0;}
+.i-clear{width: 35rpx;height: 35rpx;right: 100rpx;top: 19rpx;position: absolute}
 
 .searchResult{padding:20rpx;line-height: 1.6;}
 .searchResult view{font-size: 28rpx;}

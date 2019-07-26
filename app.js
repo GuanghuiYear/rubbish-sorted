@@ -2,7 +2,8 @@ App({
   globalData: {
     openId: '',
     userInfo: null,
-    baseUrl: 'https://xcx.ckxstudy.com'
+    baseUrl: 'https://xcx.ckxstudy.com',
+    guide:false
   },
   onLaunch: function() {
     this.login();
@@ -45,6 +46,7 @@ App({
           success: function(res) {
             if (res.data.code == 10000) {
               that.globalData.openId = res.data.openid;
+              that.globalData.guide=true;
               return;
             }
             if (res.data.code != 0) {
@@ -58,6 +60,7 @@ App({
               return;
             }
             that.globalData.openId = res.data.openid;
+
           }
         })
       },

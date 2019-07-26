@@ -1,6 +1,7 @@
 <view class="container">
   <view class="search">
-    <input type='text' class="input" placeholder='垃圾名称' value="{{searchVal}}" bindinput="inpSearch" bindconfirm="searchKey" auto-focus="true"></input>
+    <input type='text' class="input" placeholder='输入要搜索的垃圾名称' value="{{searchVal}}" bindinput="inpSearch" bindconfirm="searchKey" auto-focus="{{focus}}"></input>
+    <image src='/images/close.png' class="i-clear" bindtap='clearKey' hidden='{{clearbtn}}'></image>
     <image src='/images/search.png' class="i-search" bindtap='searchKey'></image>
   </view>
   <block wx:if="{{hasdata}}">

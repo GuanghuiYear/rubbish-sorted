@@ -16,9 +16,9 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "拍照",
-        "iconPath": "/images/camera.png",
-        "selectedIconPath": "/images/camera.png"
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home.png"
       },
       {
         "pagePath": "pages/konwledge/konwledge",

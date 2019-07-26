@@ -8,7 +8,9 @@ Page({
     showDescribe: false,
     typeImg: '',
     showTypeMask: false,
-    hasdata:false
+    hasdata:false,
+    clearbtn:true,
+    focus: true
   },
   onLoad: function(options) {
     if (typeof options.search != "undefined") {
@@ -22,7 +24,8 @@ Page({
     this.setData({
       searchVal: e.detail.value,
       // hasResult: false,
-      hasdata: false
+      hasdata: false,
+      clearbtn:false,
     })
   },
   searchKey(e) {
@@ -65,6 +68,13 @@ Page({
         }
       })
     }
+  },
+  clearKey(){
+    this.setData({
+      searchVal: '',
+      hasdata:false,
+      clearbtn: true,
+    });
   },
   toKnowledge() {
     wx.switchTab({

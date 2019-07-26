@@ -5,7 +5,13 @@ Page({
     chooseinfor: [],
     active: '',
     chooseRubbish: '',
-    inpSpplyVal: ''
+    inpSpplyVal: '',
+    guide: false,
+  },
+  onLoad() {
+    if (app.globalData.guide) {
+      this.showGuide();
+    }
   },
   toKnowledge() {
     wx.switchTab({
@@ -26,6 +32,20 @@ Page({
     this.setData({
       chooseBox: false
     })
+  },
+  hideGuide(e) {
+    this.setData({
+      guide: false
+    })
+  },
+  showGuide(e) {
+    let that = this;
+    this.setData({
+      guide: true
+    })
+    setTimeout(function() {
+      that.hideGuide();
+    }, 5000);
   },
   choose(e) {
     this.setData({
@@ -62,7 +82,7 @@ Page({
     var that = this;
     wx.chooseImage({
       count: 1,
-      sourceType: ['album','camera'],
+      sourceType: ['album', 'camera'],
       success: function(res) {
         // console.log(res)
         // 这里无论用户是从相册选择还是直接用相机拍摄，拍摄完成后的图片临时路径都会传递进来

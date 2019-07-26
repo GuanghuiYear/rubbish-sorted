@@ -3,9 +3,9 @@
 .block text{font-size: 28rpx;}
 .img{width: 90rpx;height: 90rpx;border-radius: 50%;background: #c8e2e6;margin:0 auto 10rpx;}
 .search{position: relative;border:1px solid #ccc;border-radius: 10rpx;background: rgba(255,255,255,.3);height: 91rpx;width: 100%;margin-top: 80rpx;margin-bottom: 86rpx;}
-.search .input{background: none;width: 440rpx;margin-left: 20rpx;margin-top: 20rpx;}
+.search .input{background: none;width: 440rpx;margin-left: 20rpx;margin-top: 18rpx;height: 60rpx;line-height: 60rpx;}
 .search .i-search{width: 86rpx;height: 91rpx;position: absolute;right: 0;top: 0;bottom: 0;}
-.block{width: 100%;}
+.block{width: 100%;position: relative;z-index: 1}
 .block-item{width: 33.33%;text-align: center;}
 
 .classification{background: #fff;position: fixed;bottom: 0;left: 0;right: 0;z-index: 99;}
@@ -18,3 +18,9 @@
 .confirm{background: #f8801f;color:#fff;width: 100%;border-radius: 0;}
 .confirm:after{border: none;}
 .inp-supply{padding:10rpx 0;border-bottom:1px solid #f8801f;margin-bottom: 40rpx;width: 94%;margin-left: auto;margin-right: auto;font-size: 28rpx;}
+
+.guide image{position: absolute;z-index: 9}
+.step1{width: 349rpx;height: 257rpx;top: 0;right: 110rpx;}
+.step2{width: 505rpx;height: 241rpx;left: 100rpx;top: 580rpx;}
+.step3{width: 417rpx;height: 201rpx;bottom: 0;left: 300rpx}
+.step4{width: 189rpx;height: 89rpx;right: 150rpx;top: 430rpx;}
