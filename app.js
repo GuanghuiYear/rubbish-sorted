@@ -60,7 +60,7 @@ App({
               return;
             }
             that.globalData.openId = res.data.openid;
-
+            that.globalData.guide = true;
           }
         })
       },

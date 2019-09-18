@@ -9,9 +9,14 @@ Page({
     guide: false,
   },
   onLoad() {
-    if (app.globalData.guide) {
-      this.showGuide();
-    }
+    let that = this;
+    setTimeout(function() {
+      if (app.globalData.guide) {
+        
+        that.showGuide();
+      }
+    }, 1000);
+
   },
   toKnowledge() {
     wx.switchTab({
