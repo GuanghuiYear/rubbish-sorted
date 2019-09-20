@@ -1,0 +1,3 @@
+<template name="contact">
+  <button open-type='contact'><image class="custom-server" src="/images/icon/server.png"></image></button> 
+</template>

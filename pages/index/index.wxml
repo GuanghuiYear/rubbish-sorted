@@ -7,7 +7,7 @@
   <view class="block flex-row">
     <view class="block-item flex-column" bindtap='getLocalImage'>
       <image src='/images/camera.png' class="img"></image>
-      <text>拍照</text>
+      <text>AI识别</text>
     </view>
     <view class="block-item flex-column" bindtap='toKnowledge'>
       <image src='/images/knowledge.png' class="img"></image>

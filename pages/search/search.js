@@ -1,4 +1,5 @@
 var app = getApp();
+var util = require('../../utils/util.js');
 Page({
   data: {
     searchVal: '',
@@ -10,7 +11,8 @@ Page({
     showTypeMask: false,
     hasdata:false,
     clearbtn:true,
-    focus: true
+    focus: true,
+    feedback: ''
   },
   onLoad: function(options) {
     if (typeof options.search != "undefined") {
@@ -62,7 +64,8 @@ Page({
               describe: '是指我无法识别的物种、主要包括我的大脑中没有记忆的未来生物，你好厉害！',
               showDescribe: true,
               hasResult: false,
-              hasdata: true
+              hasdata: true,
+              feedback: '点击这里把' + that.data.searchVal+'提交给我们吧'
             })
           }
         }
@@ -91,5 +94,17 @@ Page({
     this.setData({
       showTypeMask: false
     })
+  },
+  saveUserRecord() {
+    var that = this;
+    util.httpPost(app.globalData.baseUrl +'/api/save_user_record',{
+      openid: app.globalData.openId,
+      keywords: this.data.searchVal,
+      type: ''
+    },function(res) {
+      that.setData({
+        feedback: '感谢您的反馈'
+      });
+    });
   }
 })

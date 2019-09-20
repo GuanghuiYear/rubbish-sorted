@@ -1,3 +1,4 @@
+<import src="../contact-template/contact-template.wxml" />
 <view class="container">
   <view class="search">
     <input type='text' class="input" placeholder='输入要搜索的垃圾名称' value="{{searchVal}}" bindinput="inpSearch" bindconfirm="searchKey" auto-focus="{{focus}}"></input>
@@ -22,9 +23,9 @@
         <view wx:if="{{showDescribe}}">
           <text class="orangebig">{{searchResult}}</text>{{describe}}</view>
       </view>
-      <button class="more" bindtap='toKnowledge'>
-        <text>去get更多技能</text>
-      </button>
+      <view class="more" catchtap='saveUserRecord'>
+        <text>{{feedback}}</text>
+      </view>
     </block>
   </block>
   <!-- <image src="/images/picbg.png" class="v-ab picbg"></image> -->
@@ -33,3 +34,4 @@
 <view wx:if="{{showTypeMask}}" class="showtypemask" bindtap='controlTypeMask'>
   <image src='{{typeImg}}' class="typeimg"></image>
 </view>
+<template is="contact" />
