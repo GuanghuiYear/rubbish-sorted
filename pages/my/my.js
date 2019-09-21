@@ -10,6 +10,7 @@ Page({
     this.myInfo();
   },
   register(result) {
+    console.log(result);
     if (result.detail.errMsg == 'getUserInfo:ok') {
       var that = this;
       wx.login({
